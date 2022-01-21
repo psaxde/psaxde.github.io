@@ -34,11 +34,7 @@
         },
         methods: {
             shuffle() {
-                const random = Math.floor(Math.random() * this.team.length);
-                const randomName = this.team[random];
-                this.team.splice(random, 1);
-                console.log(this.team)
-                this.randomName = randomName;
+                this.randomName = this.team.sort(function() { return 0.5 - Math.random();}).pop();;
             },
         }
     });
